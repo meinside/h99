@@ -13,6 +13,9 @@ P11> encodeModified "aaaabccaadeeee"
 -- https://wiki.haskell.org/99_questions/Solutions/11
 --}
 --
+import Data.List -- for 'group' function
+
+--
 data Element a
   = Multiple Int
              a
@@ -36,3 +39,12 @@ encodeModified xs = map f $ encode xs
   where
     f (1, v) = Single v
     f (n, v) = Multiple n v
+
+--
+-- (from the solution, use group)
+encodeModified2 :: (Eq a) => [a] -> [Element a]
+encodeModified2 = map f . group
+  where
+    f ys
+      | length ys == 1 = Single (head ys)
+      | otherwise = Multiple (length ys) (head ys)
