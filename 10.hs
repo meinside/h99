@@ -7,6 +7,8 @@ Example in Haskell:
 
 encode "aaaabccaadeeee"
 [(4,'a'),(1,'b'),(2,'c'),(2,'a'),(1,'d'),(4,'e')]
+
+-- https://wiki.haskell.org/99_questions/Solutions/10
 --}
 --
 encode :: (Eq a) => [a] -> [(Int, a)]
@@ -37,4 +39,5 @@ pack = foldr func []
         then (x : y) : xs
         else [x] : y : xs
 
+encode2 :: (Eq a) => [a] -> [(Int, a)]
 encode2 xs = map (\s -> (length s, head s)) $ pack xs
