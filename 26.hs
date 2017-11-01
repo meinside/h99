@@ -13,7 +13,6 @@ Example in Haskell:
 -- https://wiki.haskell.org/99_questions/Solutions/26
 --}
 --
---
 -- (my solution - wrong: doesn't filter out duplicated combinations, like '[[a, b], [b, a]]')
 combinations :: Eq a => Int -> [a] -> [[a]]
 combinations 1 xs = [[x] | x <- xs]
