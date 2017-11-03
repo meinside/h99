@@ -16,8 +16,7 @@ P39> primesR 10 20
 -- (from 31.hs)
 isPrime :: Int -> Bool
 isPrime 1 = True
---isPrime n = foldl f True [2 .. (n - 1)]
-isPrime n = foldl f True [2 .. floor $ sqrt $ fromIntegral (n - 1)]
+isPrime n = foldl f True [2 .. floor $ sqrt $ fromIntegral n]
   where
     f False _ = False
     f True v = n `mod` v /= 0
