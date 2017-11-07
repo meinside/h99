@@ -9,3 +9,7 @@ My solutions to [Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ni
 * For learning Haskell with challenging problems.
 * For keeping and retrospecting my (awkward) solutions.
 
+---
+
+Difficult problems or solutions that were not well understood are marked as 'XXX' in the codes.
+

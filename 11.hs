@@ -32,8 +32,7 @@ encode = foldr f []
       | snd x == v = (fst x + 1, v) : xs
       | otherwise = (1, v) : x : xs
 
--- XXX - 'pattern matching' seems to be
---       the only(?) way of accessing unnamed members of data struct...
+-- 'pattern matching' seems to be the only(?) way of accessing unnamed members of data struct...
 encodeModified :: (Eq a) => [a] -> [Element a]
 encodeModified xs = map f $ encode xs
   where
