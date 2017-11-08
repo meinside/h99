@@ -34,6 +34,7 @@ data Tree a
            (Tree a)
   deriving (Show, Eq)
 
+-- XXX - not fully understood...
 --
 -- (from the solution,)
 filled :: Tree a -> [[Bool]]

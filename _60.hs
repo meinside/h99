@@ -29,7 +29,8 @@ data Tree a
   deriving (Show, Eq)
 
 --
--- (from the solution, not understood)
+-- (from the solution,)
+-- XXX - not understood
 -- maximum number of nodes in a weight-balanced tree of height h
 maxNodes :: Int -> Int
 maxNodes h = 2 ^ h - 1

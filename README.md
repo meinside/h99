@@ -11,5 +11,5 @@ My solutions to [Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ni
 
 ---
 
-Difficult problems or solutions that were not well understood are marked as 'XXX' in the codes.
+File names of difficult problems or solutions that were not well understood are prefixed with `_`.
 
