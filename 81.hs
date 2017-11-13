@@ -10,21 +10,6 @@ Example in Haskell:
 -- https://wiki.haskell.org/99_questions/Solutions/81
 --}
 --
---
-data Graph a =
-  Graph [a]
-        [(a, a)]
-  deriving (Show, Eq)
-
-newtype Adjacency a =
-  Adj [(a, [a])]
-  deriving (Show, Eq)
-
-newtype Friendly a =
-  Edge [(a, a)]
-  deriving (Show, Eq)
-
---
 -- (my solution, looks awkward, loops infinitely when there's no available path...)
 paths :: (Eq a) => a -> a -> [(a, a)] -> [[a]]
 paths _ _ [] = []

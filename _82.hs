@@ -18,20 +18,6 @@ graph> cycle 1 [(1,2),(2,3),(1,3),(3,4),(4,2),(5,6)]
 import Data.List -- for 'partition'
 
 --
-data Graph a =
-  Graph [a]
-        [(a, a)]
-  deriving (Show, Eq)
-
-newtype Adjacency a =
-  Adj [(a, [a])]
-  deriving (Show, Eq)
-
-newtype Friendly a =
-  Edge [(a, a)]
-  deriving (Show, Eq)
-
---
 -- (from the solution,)
 cycle' :: (Eq a) => a -> [(a, a)] -> [[a]]
 cycle' n g = search [[n]] []
